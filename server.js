@@ -1,6 +1,6 @@
 const express = require("express");
 const router = require("./routes/routes");
-require("./utils/dbConnect");
+// require("./utils/dbConnect");
 const cookieParser = require("cookie-parser");
 
 const app = express();

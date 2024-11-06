@@ -1,0 +1,102 @@
+.login-form-container {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    background: url("/public/images/login.jpg") center / cover;
+    margin: 250px auto 0;
+    z-index: 10000;
+}
+
+.login-form-container .panel {
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+}
+
+.login-form-container .panel h2 {
+    margin-top: 20px;
+}
+
+.login-form-container .panel .credentials {
+    width: 85%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form-container .panel .credentials p {
+    font-size: 1rem;
+}
+
+.login-form-container .panel .credentials input {
+    border: none;
+    width: 90%;
+    height: 25px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.login-form-container .user,
+.login-form-container .password {
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.login-form-container .password {
+    margin-top: 25px;
+}
+
+.login-form-container .panel .loginButton {
+    text-decoration: none;
+    color: snow;
+    margin-top: 30px;
+    padding: 10px 120px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form-container .panel .loginButton:hover {
+    background-color: grey;
+}
+
+.login-form-container .or {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.login-form-container .signupLink {
+    color: black;
+}
+
+.login-form-container .signupLink:hover {
+    color: grey;
+}
+
+.login-form-container form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: 0.6rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.login-form-container form .box:focus {
+    border-color: var(--orange);
+}

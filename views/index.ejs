@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trip Connect</title>
-  </head>
-  <body>
-    abc
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font awesome cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+     <!-- link custom css -->
+      <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <!-- header section starts -->
+
+    <header>
+      <div id="menu-bar" class="fas fa-bars">
+
+      </div>
+
+
+        <a href="#" class="logo"><span>T</span>ravel</a>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Book">Book</a>
+            <a href="#Packages">Packages</a>
+            <a href="#Services">Services</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Review">Review</a>
+            <a href="#Contact">Contact</a>
+            <a href="/login">Login</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fas fa-user" id="login-btn"></i>
+        </div>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <label for="search-bar" class="fas fa-search"></label>
+        </foam>
+
+    </header>
+
+
+
+    <!-- header section ends -->
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>Adventure is worthwhile</h3>
+    <p>Discover new places with us, adventure awaits</p>
+    <a href="#" class="btn">discover more</a>
+  </div>
+
+  <div class="controls">
+    <span class="vid-btn active" data-src="./vid/video1.mp4"></span>
+    <span class="vid-btn" data-src="./vid/video2.mp4"></span>
+    <span class="vid-btn" data-src="./vid/video3.mp4"></span>
+    <span class="vid-btn" data-src="./vid/video4.mp4"></span>
+    <span class="vid-btn" data-src="./vid/video5.mp4"></span>
+</div>
+
+<div class="video-container">
+    <video src="./vid/video1.mp4" id="video-slider" loop autoplay muted></video>
+</div>
+
+<!-- Range slider to navigate between videos
+<div class="range-slider">
+    <input type="range" id="videoRange" min="0" max="4" value="0">
+</div> -->
+
+</section>
+
+
+ <!-- home section ends -->
+
+<!-- book section starts -->
+
+<section class="book" id="book">
+  <h1 class="heading">
+    <span>b</span>
+    <span>o</span>
+    <span>o</span>
+    <span>k</span>
+    <span class="space"></span>
+    <span>n</span>
+    <span>o</span>
+    <span>w</span>
+  </h1>
+</section>
+     <!-- book section ends -->
+
+
+    <!-- link custom js  -->
+     <script src="/public/scripts/script.js"></script>
+</body>
 </html>

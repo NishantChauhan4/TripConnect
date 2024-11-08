@@ -13,4 +13,18 @@ const travellerSchema = new mongoose.Schema({
 
 const traveller = mongoose.model("traveller", travellerSchema);
 
-module.exports = { traveller };
+const plannerSchema = new mongoose.Schema({
+  username: String,
+  password: String,
+  mobile: Number,
+  email: String,
+  city: String,
+  state: String,
+  businessname: String,
+  gstnumebr: Number,
+  iatanumber: Number,
+});
+
+const planner = mongoose.model("planner", plannerSchema);
+
+module.exports = { traveller, planner };

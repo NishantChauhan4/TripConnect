@@ -1,17 +1,31 @@
 const express = require("express");
 const isAuthenticated = require("../middleware/middleware");
-const { login, signup, newSignup } = require("../controller/controller");
+const {
+  renderLogin,
+  renderSignup,
+  travellerSignup,
+  travellerLogin,
+  logout,
+} = require("../controller/controller");
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index.ejs");
+  const token = req.cookies ? req.cookies.token : null;
+
+  if (!token) {
+    res.render("index.ejs", { previousLogin: null });
+  } else {
+    res.render("index.ejs", { previousLogin: true });
+  }
 });
 
-router.get("/login", login);
+router.get("/login", renderLogin);
 
-router.get("/signup", signup);
+router.get("/signup", renderSignup);
 
-router.post("/signup", newSignup);
+router.post("/signup", travellerSignup);
+
+router.post("/login", travellerLogin);
 
 module.exports = router;

@@ -29,7 +29,11 @@
               required
               name="username"
             />
-            <h6 style="color: rgba(255, 0, 0, 0.858); margin-left: 30px"></h6>
+            <% if(userTaken != null){%>
+            <h6 style="color: rgba(255, 0, 0, 0.858); margin-left: 30px">
+              <%=userTaken%>
+            </h6>
+            <%}%>
           </div>
 
           <div class="password">
@@ -42,12 +46,78 @@
               name="password"
             />
           </div>
+
+          <div class="age">
+            <p>Age</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="number"
+              placeholder="  Type your age"
+              required
+              name="age"
+            />
+          </div>
+
+          <div class="gender">
+            <p>Gender</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="text"
+              placeholder="  Type your gender"
+              required
+              name="gender"
+            />
+          </div>
+
+          <div class="mobile">
+            <p>Mobile Number</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="number"
+              placeholder="  Type your mobile number"
+              required
+              name="mobile"
+            />
+          </div>
+
+          <div class="email">
+            <p>Email</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="password"
+              placeholder="  Type your email"
+              required
+              name="email"
+            />
+          </div>
+
+          <div class="city">
+            <p>City</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="text"
+              placeholder="  Type your city"
+              required
+              name="city"
+            />
+          </div>
+
+          <div class="state">
+            <p>State</p>
+            <i class="fa-solid fa-lock" style="color: black"></i>
+            <input
+              type="text"
+              placeholder="  Type your state"
+              required
+              name="state"
+            />
+          </div>
         </div>
 
         <button class="signupButton" type="submit">Sign Up</button>
 
         <span class="or"
-          >or <br /><br /><a href="login.html" class="loginLink">Login</a></span
+          >or <br /><br /><a href="/login" class="loginLink">Login</a></span
         >
       </div>
     </form>

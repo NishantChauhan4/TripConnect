@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { traveller, planner } = require("../model/model");
+const { traveller, planner, trip } = require("../model/model");
 
 const renderLogin = (req, res) => {
   res.render("login.ejs");
@@ -88,10 +88,58 @@ const logout = (req, res) => {
   res.redirect("/");
 };
 
+const search = async (req, res) => {
+  try {
+    const reqSearch = req.body.search;
+
+    const tripsFound = await trip.find({
+      from: reqSearch,
+    });
+
+    const token = req.cookies ? req.cookies.token : null;
+
+    if (!token) {
+      res.render("index.ejs", { previousLogin: null, tripsFound: tripsFound });
+    } else {
+      res.render("index.ejs", { previousLogin: true, tripsFound: tripsFound });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const addTrip = async (req, res) => {
+  const reqName = req.body.name;
+  const reqUsername = req.userData.username;
+  const reqMobile = req.body.mobile;
+  const reqEmail = req.body.email;
+  const reqFrom = req.body.from;
+  const reqTo = req.body.to;
+  const reqDate = req.body.date;
+  const reqDuration = req.body.duration;
+  const reqPrice = req.body.price;
+
+  await trip.create({
+    name: reqName,
+    username: reqUsername,
+    mobile: reqMobile,
+    email: reqEmail,
+    from: reqFrom,
+    to: reqTo,
+    date: reqDate,
+    duration: reqDuration,
+    price: reqPrice,
+  });
+
+  // res.redirect()
+};
+
 module.exports = {
   renderLogin,
   renderSignup,
   travellerSignup,
   travellerLogin,
   logout,
+  search,
+  addTrip,
 };

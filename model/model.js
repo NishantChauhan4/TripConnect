@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const travellerSchema = new mongoose.Schema({
+  name: String,
   username: String,
   password: String,
   age: Number,
@@ -14,6 +15,7 @@ const travellerSchema = new mongoose.Schema({
 const traveller = mongoose.model("traveller", travellerSchema);
 
 const plannerSchema = new mongoose.Schema({
+  name: String,
   username: String,
   password: String,
   mobile: Number,
@@ -27,4 +29,18 @@ const plannerSchema = new mongoose.Schema({
 
 const planner = mongoose.model("planner", plannerSchema);
 
-module.exports = { traveller, planner };
+const tripSchema = new mongoose.Schema({
+  name: String,
+  username: String,
+  mobile: Number,
+  email: String,
+  from: String,
+  to: String,
+  date: String,
+  duration: String,
+  price: Number,
+});
+
+const trip = mongoose.model("trip", tripSchema);
+
+module.exports = { traveller, planner, trip };

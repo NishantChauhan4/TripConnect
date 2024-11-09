@@ -6,6 +6,8 @@ const {
   travellerSignup,
   travellerLogin,
   logout,
+  search,
+  addTrip,
 } = require("../controller/controller");
 
 const router = express.Router();
@@ -14,9 +16,9 @@ router.get("/", (req, res) => {
   const token = req.cookies ? req.cookies.token : null;
 
   if (!token) {
-    res.render("index.ejs", { previousLogin: null });
+    res.render("index.ejs", { previousLogin: null, tripsFound: [] });
   } else {
-    res.render("index.ejs", { previousLogin: true });
+    res.render("index.ejs", { previousLogin: true, tripsFound: [] });
   }
 });
 
@@ -27,5 +29,9 @@ router.get("/signup", renderSignup);
 router.post("/signup", travellerSignup);
 
 router.post("/login", travellerLogin);
+
+router.get("logout", logout);
+
+router.post("/search", isAuthenticated, search);
 
 module.exports = router;

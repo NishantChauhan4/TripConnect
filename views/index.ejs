@@ -38,8 +38,13 @@
         <i class="fas fa-user" id="login-btn"></i>
       </div>
 
-      <form action="" class="search-bar-container">
-        <input type="search" id="search-bar" placeholder="search here..." />
+      <form action="/search" method="post" class="search-bar-container">
+        <input
+          type="search"
+          id="search-bar"
+          placeholder="search here..."
+          name="search"
+        />
         <label for="search-bar" class="fas fa-search"></label>
       </form>
       <%if(previousLogin != null){%>
@@ -99,6 +104,19 @@
       </h1>
     </section>
     <!-- book section ends -->
+
+    <ul>
+      <%tripsFound.forEach(element => { %>
+      <li class="tripFound">
+        <h2 class="planner">Planner : <%=element.name%></h2>
+        <h2 class="from">From : <%=element.from%></h2>
+        <h2 class="to">To : <%=element.to%></h2>
+        <h2 class="date">Date : <%=element.date%></h2>
+        <h2 class="duration">Duration : <%=element.duration%></h2>
+        <h2 class="price">Price : <%=element.price%></h2>
+      </li>
+      <%});%>
+    </ul>
 
     <!-- link custom js  -->
     <script src="/public/scripts/script.js"></script>

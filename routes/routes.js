@@ -3,8 +3,11 @@ const isAuthenticated = require("../middleware/middleware");
 const {
   renderLogin,
   renderSignup,
-  travellerSignup,
-  travellerLogin,
+  renderSignupTraveler,
+  renderSignupPlanner,
+  travelerSignup,
+  plannerSignup,
+  travelerLogin,
   logout,
   search,
   addTrip,
@@ -26,9 +29,15 @@ router.get("/login", renderLogin);
 
 router.get("/signup", renderSignup);
 
-router.post("/signup", travellerSignup);
+router.get("/signup/traveler", renderSignupTraveler);
 
-router.post("/login", travellerLogin);
+router.get("/signup/planner", renderSignupPlanner);
+
+router.post("/signup/traveler", travelerSignup);
+
+router.post("/signup/planner", plannerSignup);
+
+router.post("/login", travelerLogin);
 
 router.get("logout", logout);
 

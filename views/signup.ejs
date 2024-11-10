@@ -1,125 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sign Up</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
     <link rel="stylesheet" href="/public/css/signup.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap"
     />
   </head>
   <body>
-    <form class="signupForm" action="/signup" method="post">
-      <div class="panel">
-        <h2>Sign Up</h2>
-
-        <div class="credentials">
-          <div class="user">
-            <p>Username</p>
-            <i class="fa-solid fa-user" style="color: black"></i>
-            <input
-              type="text"
-              placeholder="  Type your username"
-              required
-              name="username"
-            />
-            <% if(userTaken != null){%>
-            <h6 style="color: rgba(255, 0, 0, 0.858); margin-left: 30px">
-              <%=userTaken%>
-            </h6>
-            <%}%>
-          </div>
-
-          <div class="password">
-            <p>Password</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="password"
-              placeholder="  Type your password"
-              required
-              name="password"
-            />
-          </div>
-
-          <div class="age">
-            <p>Age</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="number"
-              placeholder="  Type your age"
-              required
-              name="age"
-            />
-          </div>
-
-          <div class="gender">
-            <p>Gender</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="text"
-              placeholder="  Type your gender"
-              required
-              name="gender"
-            />
-          </div>
-
-          <div class="mobile">
-            <p>Mobile Number</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="number"
-              placeholder="  Type your mobile number"
-              required
-              name="mobile"
-            />
-          </div>
-
-          <div class="email">
-            <p>Email</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="password"
-              placeholder="  Type your email"
-              required
-              name="email"
-            />
-          </div>
-
-          <div class="city">
-            <p>City</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="text"
-              placeholder="  Type your city"
-              required
-              name="city"
-            />
-          </div>
-
-          <div class="state">
-            <p>State</p>
-            <i class="fa-solid fa-lock" style="color: black"></i>
-            <input
-              type="text"
-              placeholder="  Type your state"
-              required
-              name="state"
-            />
-          </div>
-        </div>
-
-        <button class="signupButton" type="submit">Sign Up</button>
-
-        <span class="or"
-          >or <br /><br /><a href="/login" class="loginLink">Login</a></span
-        >
+    <div class="sign-up">
+      <div class="sign-up-child"></div>
+      <div class="choose-your-role">Choose your role</div>
+      <div class="sign-up1">Sign Up</div>
+      <div class="sign-up-item"></div>
+      <div class="already-have-an-container">
+        <span>Already have an account?</span>
+        <span class="span"> </span>
+        <a href="signin.html">
+          <span class="log-in-here">Log in here.</span>
+        </a>
       </div>
-    </form>
+      <img class="download-2-icon" alt="" src="/public/images/download 2.png" />
+
+      <img
+        class="pizarra-blanca-vaca-en-transp"
+        alt=""
+        src="/public/images/Pizarra blanca vacía en transparente _ Vector Premium 1.png"
+      />
+
+      <img
+        class="designer-1-2"
+        alt=""
+        src="/public/images/Designer (1) 2.png"
+      />
+
+      <div class="sign-up-inner"></div>
+      <div class="rectangle-div"></div>
+      <a href="/signup/traveler">
+        <b class="traveler">Traveler</b>
+      </a>
+
+      <!-- Planner Button with Link -->
+      <a href="/signup/planner">
+        <b class="planner">Planner</b>
+      </a>
+    </div>
   </body>
 </html>

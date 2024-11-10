@@ -7,11 +7,20 @@ const renderLogin = (req, res) => {
 };
 
 const renderSignup = (req, res) => {
-  res.render("signup.ejs", { userTaken: null });
+  res.render("signup.ejs");
 };
 
-const travellerSignup = async (req, res) => {
+const renderSignupTraveler = (req, res) => {
+  res.render("signup(traveler).ejs", { userTaken: null });
+};
+
+const renderSignupPlanner = (req, res) => {
+  res.render("signup(planner).ejs", { userTaken: null });
+};
+
+const travelerSignup = async (req, res) => {
   try {
+    const reqName = req.nody.name;
     const reqUsername = req.body.username;
     const reqPassword = req.body.password;
     const reqAge = req.body.age;
@@ -25,9 +34,12 @@ const travellerSignup = async (req, res) => {
     const userFound = await traveller.findOne({ username: reqUsername });
 
     if (userFound != null && reqUsername === userFound.username) {
-      res.render("signup.ejs", { userTaken: "Username already taken" });
+      res.render("signup(traveler).ejs", {
+        userTaken: "Username already taken",
+      });
     } else {
       await traveller.create({
+        name: reqName,
         username: reqUsername,
         password: hashedPassword,
         age: reqAge,
@@ -38,14 +50,55 @@ const travellerSignup = async (req, res) => {
         state: reqState,
       });
 
-      res.redirect("/login");
+      res.send("Traveler sign up successful");
+      // res.redirect("/login");
     }
   } catch (error) {
     console.log(error);
   }
 };
 
-const travellerLogin = async (req, res) => {
+const plannerSignup = async (req, res) => {
+  try {
+    const reqName = req.body.name;
+    const reqUsername = req.body.username;
+    const reqPassword = req.body.password;
+    const reqMobile = req.body.mobile;
+    const reqEmail = req.body.email;
+    const reqAddress = req.body.address;
+    const reqBusinessname = req.body.businessname;
+    const reqGstNumber = req.body.gstnumber;
+    const reqIataNumber = req.body.iatanumber;
+    const hashedPassword = await bcrypt.hash(reqPassword, 10);
+
+    const userFound = await planner.findOne({ username: reqUsername });
+
+    if (userFound != null && reqUsername === userFound.username) {
+      res.render("signup(traveler).ejs", {
+        userTaken: "Username already taken",
+      });
+    } else {
+      await planner.create({
+        name: reqName,
+        username: reqUsername,
+        password: hashedPassword,
+        mobile: reqMobile,
+        email: reqEmail,
+        address: reqAddress,
+        businessname: reqBusinessname,
+        gstnumber: reqGstNumber,
+        iatanumber: reqIataNumber,
+      });
+
+      res.send("Planner sign up successful");
+      // res.redirect("/login");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const travelerLogin = async (req, res) => {
   try {
     const reqUsername = req.body.username;
     const reqPassword = req.body.password;
@@ -137,8 +190,11 @@ const addTrip = async (req, res) => {
 module.exports = {
   renderLogin,
   renderSignup,
-  travellerSignup,
-  travellerLogin,
+  renderSignupTraveler,
+  renderSignupPlanner,
+  travelerSignup,
+  plannerSignup,
+  travelerLogin,
   logout,
   search,
   addTrip,

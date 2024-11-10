@@ -20,10 +20,9 @@ const plannerSchema = new mongoose.Schema({
   password: String,
   mobile: Number,
   email: String,
-  city: String,
-  state: String,
+  address: String,
   businessname: String,
-  gstnumebr: Number,
+  gstnumber: Number,
   iatanumber: Number,
 });
 

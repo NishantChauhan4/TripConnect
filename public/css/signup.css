@@ -1,107 +1,138 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.sign-up-child {
+    position: absolute;
+    top: 88px;
+    left: 100px;
+    border-radius: 25px;
+    background-color: #fff;
+    width: 542px;
+    height: 804px;
 }
+.choose-your-role {
+    position: absolute;
+    top: 294px;
+    left: 143px;
+    line-height: 24px;
+    color: #636060;
+    display: inline-block;
+    width: 309px;
+    height: 24px;
+}
+.sign-up1 {
+    position: absolute;
+    top: 162px;
+    left: 169px;
+    font-size: 48px;
+    line-height: 56px;
+    font-family: Adamina;
+    color: #000;
+}
+.sign-up-item {
+    position: absolute;
+    top: 281px;
+    left: 141.96px;
+    border-top: 2px dashed #b5b5b5;
+    box-sizing: border-box;
+    width: 241.1px;
+    height: 2px;
+}
+.span {
+    color: #000;
+}
+.log-in-here {
+    color: #10104f;
+}
+.already-have-an-container {
+    position: absolute;
+    top: 769px;
+    left: 192px;
+    line-height: 24px;
+    color: #d6bad1;
+}
+.download-2-icon {
+    position: absolute;
+    height: 100%;
+    width: 44.65%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 55.35%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+.pizarra-blanca-vaca-en-transp {
+    position: absolute;
+    top: 429px;
+    left: 82px;
+    width: 553px;
+    height: 311px;
+    object-fit: cover;
+}
+.designer-1-2 {
+    position: absolute;
+    top: 272px;
+    left: 352px;
+    width: 243px;
+    height: 226px;
+    object-fit: cover;
+}
+.sign-up-inner {
+    position: absolute;
+    top: 547px;
+    left: 205px;
+    box-shadow: 0px 2px 1px rgba(76, 139, 214, 0.25);
+    border-radius: 100px;
+    background-color: #10104f;
+    width: 129px;
+    height: 48px;
+}
+.rectangle-div {
+    position: absolute;
+    top: 547px;
+    left: 388px;
+    box-shadow: 0px 2px 1px rgba(76, 139, 214, 0.25);
+    border-radius: 100px;
+    background-color: #10104f;
+    width: 129px;
+    height: 48px;
+}
+.traveler {
+    position: absolute;
+    top: 555px;
+    left: 227px;
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    width: 92px;
+    height: 32px;
+}
+.planner {
+    position: absolute;
+    top: 555px;
+    left: 410px;
+    font-size: 24px;
+    line-height: 32px;
+    display: inline-block;
+    width: 92px;
+    height: 32px;
+}
+.sign-up {
+    width: 100%;
+    position: relative;
+    border-radius: 25px;
+    background: linear-gradient(180deg, rgba(130, 30, 126, 0.83) 19.06%, #10104f 89.9%);
+    height: 1024px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    color: #fbeeee;
+    font-family: Roboto;
+}
+
 
 body {
-  font-family: sans-serif;
-  font-size: 1.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background: url("/public/images/login.jpg");
-  background-position: center;
-  background-size: cover;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    margin: 0;
+    line-height: normal;
 }
 
-.signupForm {
-  display: flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  height: 85%;
-  width: 30%;
-}
-
-.panel {
-  border: none;
-  height: 100%;
-  width: 100%;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
-}
-
-.panel h2 {
-  margin-top: 20px;
-}
-
-.credentials {
-  width: 85%;
-  height: 100%;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
-.credentials p {
-  font-size: 1rem;
-}
-
-.credentials i {
-  margin-top: 5px;
-}
-
-.credentials input {
-  border: none;
-  width: 90%;
-  height: 25px;
-  border-radius: 10px;
-}
-
-.user {
-  padding-bottom: 10px;
-  border-bottom: 1px solid grey;
-}
-
-.password {
-  margin-top: 25px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid grey;
-}
-
-.panel .signupButton {
-  color: #f5f5f5;
-  margin-top: 30px;
-  padding: 10px 120px 10px 120px;
-  border: none;
-  border-radius: 10px;
-  background-color: black;
-  font-size: 1.4rem;
-}
-
-.panel .signupButton:hover {
-  background-color: grey;
-}
-
-.or {
-  margin-top: 30px;
-  text-align: center;
-}
-.loginLink {
-  color: black;
-}
-.loginLink:hover {
-  color: black;
-}

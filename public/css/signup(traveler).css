@@ -1,0 +1,152 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(130, 30, 126, 0.83) 19.06%, #10104f 89.9%);
+    color: black;
+}
+
+/* Main container for the sign-up page */
+.sign-uptraveler {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Signup form container */
+.sign-uptraveler-child {
+    border-radius: 25px;
+    background-color: #fff;
+    width: 120%;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    color: black; /* Ensures all text within the box is black */
+}
+
+/* Header text */
+.sign-up {
+    font-size: 48px;
+    line-height: 56px;
+    font-family: 'Adamina', serif;
+    color: black;
+    text-align: center;
+}
+
+/* Subheading text */
+.please-fill-in {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Row styling within form for inputs */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+.form-group label {
+    font-size: 16px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* Input styling */
+.form-group input {
+    padding: 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    font-size: 14px;
+}
+
+/* Terms and conditions checkbox styling */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+.terms a {
+    color: #10104f;
+    text-decoration: none;
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #10104f;
+    color: #fbeeee;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    align-self: center;
+    max-width: 200px;
+}
+
+.submit-button:hover {
+    background-color: #13135f;
+}
+
+/* Acceptance message and login link styling */
+.i-accept-the-container,
+.already-have-an-container {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    color: black;
+}
+
+.already-have-an-container a {
+    color: #d6bad1;
+    text-decoration: none;
+}
+
+/* Divider line */
+.line-div {
+    width: 100%;
+    border-top: 2px dashed #cfcccc;
+    margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .sign-uptraveler-child {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .sign-up {
+        font-size: 36px;
+    }
+}

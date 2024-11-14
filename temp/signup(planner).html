@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	
+  	<link rel="stylesheet"  href="signup(planner).css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap" />
+  	
+  	
+  	
+</head>
+<body>
+  	
+  	<div class="sign-upplanner">
+    		<div class="sign-upplanner-child">
+                <div class="sign-up">Sign Up</div><br>
+                <div class="please-fill-in">Please fill in this form to create an account!</div>
+                
+            <div class="sign-upplanner-item">
+            </div>
+    		<div class="sign-upplanner-inner">
+    		</div>
+    		<div class="rectangle-div">
+    		</div>
+    		<div class="sign-upplanner-child1">
+    		</div>
+    		<div class="sign-upplanner-child2">
+    		</div>
+    		<div class="sign-upplanner-child3">
+    		</div>
+    		<div class="sign-upplanner-child4">
+    		</div>
+    		<div class="sign-upplanner-child5">
+    		</div>
+    		<div class="sign-upplanner-child6">
+    		</div>
+    		<div class="sign-upplanner-child7">
+    		</div>
+    		<div class="sign-upplanner-child8">
+    		</div>
+    		<div class="sign-upplanner-child9">
+    		</div>
+    		<div class="sign-upplanner-child10">
+    		</div>
+            <form>
+                <!-- Name Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required />
+                    </div>
+                </div>
+        
+                <!-- Username and Business Name Fields -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required />
+                </div>
+                <div class="form-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" name="business-name" />
+                </div>
+        
+                <!-- Contact Fields -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+        
+                <!-- Identification Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="aadhar-number">Aadhar Number</label>
+                        <input type="text" id="aadhar-number" name="aadhar-number" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="gst-number">GST Number</label>
+                        <input type="text" id="gst-number" name="gst-number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="iata-number">IATA Number</label>
+                        <input type="text" id="iata-number" name="iata-number" />
+                    </div>
+                </div>
+        
+                <!-- Address Field -->
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" />
+                </div>
+        
+                <!-- Password Fields -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required />
+                        <small class="show-password"><input type="checkbox" onclick="togglePassword('password')"> Show Password</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required />
+                        <small class="show-password1"><input type="checkbox" onclick="togglePassword('confirm-password')"> Show Password</small>
+                    </div>
+                </div>
+        
+                <!-- Terms Checkbox -->
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <label for="terms">I accept the <a href="#">Terms of Use</a></label>
+                </div>
+        
+                <!-- Submit Button -->
+                <button type="button" class="submit-button" id="signUpButton">Sign Up</button>
+            </form>
+    		<div class="i-accept-the-container">
+      			<span class="i-accept-the">I accept the</span>
+      			<span> </span>
+      			<span class="terms-of-use">Terms of Use</span>
+      			<span> </span>
+      			<span class="span">&</span>
+      			<span> </span>
+      			<span class="terms-of-use">Privacy Policy.</span>
+    		</div>
+    		<div class="already-have-an-account">
+				<span>Already have an account?</span>
+				<a href="signin.html" class="login-link">Log in here.</a>
+			</div>
+    		<!-- <div class="line-div">
+    		</div> -->
+    		<div class="sign-upplanner-child11">
+    		</div>
+        </div>
+    		<img class="eye-icon" alt="" src="eye.svg">
+    		
+    		<img class="eye-icon1" alt="" src="eye.svg">
+    		
+  	</div>
+  	
+  	<script>
+        document.getElementById("signUpButton").onclick = function() {
+            window.location.href = "login.html";
+        };
+    </script>
+  	
+  	
+</body>
+</html>

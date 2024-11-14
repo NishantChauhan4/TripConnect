@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet" href="signup(traveler).css" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Adamina:wght@400&display=swap" />
+</head>
+<body>
+  	<div class="sign-uptraveler">
+      	<form class="sign-up-form" action="signin.html" method="get"> <!-- Add action and method -->
+      		<div class="sign-uptraveler-child">
+          		<!-- Optional content like logo or header -->
+				<div class="sign-up">Sign Up</div><br>
+      			<div class="please-fill-in">Please fill in this form to create an account!</div>
+
+				<div class="form-row">
+					<div class="form-group">
+						<label for="first-name">First Name</label>
+						<input type="text" id="first-name" name="first-name" required />
+					</div>
+					<div class="form-group">
+						<label for="last-name">Last Name</label>
+						<input type="text" id="last-name" name="last-name" required />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="age">Age</label>
+					<input type="number" id="age" name="age" required>
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" required />
+				</div>
+
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+
+				<div class="form-group">
+					<label for="username" >Username</label>
+					<input type="text" id="username" name="username" required>
+				</div>
+
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" required />
+					<small class="show-password"><input type="checkbox" onclick="togglePassword('password')"> Show Password</small>
+				</div>
+
+				<div class="form-group">
+					<label for="confirm-password">Confirm Password</label>
+					<input type="password" id="confirm-password" name="confirm-password" required>
+				</div>
+
+				<div class="form-group">
+					<label for="city">City</label>
+					<input type="text" id="city" name="city" required>
+				</div>
+
+				<div class="form-group">
+					<label for="state">State</label>
+					<input type="text" id="state" name="state" required>
+				</div>
+
+				<div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <label for="terms">I accept the <a href="#">Terms of Use</a></label>
+                </div>
+			
+				<button type="button" class="submit-button" id="signUpButton">Sign Up</button>
+			</form>
+
+			<div class="i-accept-the">
+				<span>I accept the</span>
+				<span class="terms-of-use">Terms of Use</span>
+				<span>&</span>
+				<span class="terms-of-use">Privacy Policy.</span>
+			</div>
+
+			<div class="already-have-an-account">
+				<span>Already have an account?</span>
+				<a href="login.html" class="login-link">Log in here.</a>
+			</div>
+		</div>
+  	</div>
+
+  	<!-- Eye icons for show/hide password -->
+  	<img class="eye-icon" alt="eye" src="eye.svg">
+  	<img class="eye-icon1" alt="eye" src="eye.svg">
+	  <script>
+        document.getElementById("signUpButton").onclick = function() {
+            window.location.href = "login.html";
+        };
+    </script>
+</body>
+</html>

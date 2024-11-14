@@ -28,36 +28,6 @@
     width: 535px;
     height: 59px;
 }
-.check-now-button-child {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-radius: 12px;
-    background-color: #ffbc00;
-    width: 121px;
-    height: 38px;
-    z-index: 1; /* Lower z-index to place behind the text */
-}
-
-.check-now-button {
-    position: absolute;
-    top: 428px;
-    left: 80px;
-    width: 121px;
-    height: 38px;
-    font-size: 16px;
-    font-family: Inter;
-}
-
-.sign-up {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2; /* Higher z-index to display on top of child */
-    color: #000;
-    font-weight: bold;
-}
-
 .group-child {
     position: absolute;
     top: 0px;
@@ -596,31 +566,31 @@
     width: 16px;
     height: 15px;
 }
-/* .kkkkkkk {
+.kkkkkkk {
     position: absolute;
     top: 2619px;
     left: 42px;
     width: 315px;
     height: 457px;
-} */
+}
 .kkkkkkk1 {
     position: absolute;
     top: 2619px;
-    left: 208px;
+    left: 388px;
     width: 315px;
     height: 457px;
 }
 .kkkkkkk2 {
     position: absolute;
     top: 2619px;
-    left: 634px;
+    left: 734px;
     width: 315px;
     height: 457px;
 }
 .kkkkkkk3 {
     position: absolute;
     top: 2619px;
-    left: 1060px;
+    left: 1084px;
     width: 315px;
     height: 457px;
 }
@@ -716,7 +686,7 @@
     position: absolute;
     top: 2069px;
     left: 0px;
-    background-color: #d99677;
+    background-color: #d4fbff;
     width: 1440px;
     height: 263px;
     overflow: hidden;
@@ -944,98 +914,4 @@ body {
     margin: 0;
     line-height: normal;
 }
-
-/* General navbar styling */
-.navbar {
-display: flex;
-justify-content: space-around;
-align-items: center;
-background-color: #333;
-padding: 1rem;
-color: #fff;
-}
-
-.navbar a{
-    color: #fff;
-    font-size: 1.3rem;
-    margin: 0 .8rem;
-}
-/* Styling for each navigation item */
-.nav-item {
-color: white;
-font-size: 1rem;
-text-decoration: none;
-padding: 0.5rem 1rem;
-background: #555;
-border-radius: 2rem;
-}
-
-/* Hover effect for nav items */
-.nav-item:hover {
-background-color: darkblue;
-border-radius: 2rem;
-}
-
-.navbar a:hover{
-    color: skyblue;
-}
-/* Specific styling for the Sign Up/Sign In link */
-.sign-up-link b {
-font-weight: bold;
-color: #ffcc00; /* Distinct color for sign-up/sign-in */
-}
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*{
-    scroll-padding-top: 6rem;
-    scroll-behavior: smooth;
-}
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .navbar {
-        flex-direction: column;
-    }
-    .upper-frame {
-        padding: 15px;
-    }
-    .category, .category1, .category2, .category-active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
 

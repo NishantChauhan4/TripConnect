@@ -6,6 +6,14 @@ const renderLogin = (req, res) => {
   res.render("login.ejs");
 };
 
+const renderLoginTraveler = (req, res) => {
+  res.render("signin(traveler).ejs");
+};
+
+const renderLoginPlanner = (req, res) => {
+  res.render("signin(planner).ejs");
+};
+
 const renderSignup = (req, res) => {
   res.render("signup.ejs");
 };
@@ -20,7 +28,7 @@ const renderSignupPlanner = (req, res) => {
 
 const travelerSignup = async (req, res) => {
   try {
-    const reqName = req.nody.name;
+    const reqName = req.body.name;
     const reqUsername = req.body.username;
     const reqPassword = req.body.password;
     const reqAge = req.body.age;
@@ -50,8 +58,7 @@ const travelerSignup = async (req, res) => {
         state: reqState,
       });
 
-      res.send("Traveler sign up successful");
-      // res.redirect("/login");
+      res.redirect("/login/traveler");
     }
   } catch (error) {
     console.log(error);
@@ -90,8 +97,7 @@ const plannerSignup = async (req, res) => {
         iatanumber: reqIataNumber,
       });
 
-      res.send("Planner sign up successful");
-      // res.redirect("/login");
+      res.redirect("/login/planner");
     }
   } catch (error) {
     console.log(error);
@@ -189,6 +195,8 @@ const addTrip = async (req, res) => {
 
 module.exports = {
   renderLogin,
+  renderLoginTraveler,
+  renderLoginPlanner,
   renderSignup,
   renderSignupTraveler,
   renderSignupPlanner,

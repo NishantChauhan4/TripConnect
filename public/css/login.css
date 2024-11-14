@@ -1,35 +1,35 @@
-.sign-up-child {
+.log-in-child {
     position: absolute;
-    top: 88px;
-    left: 100px;
-    /* border-radius: 25px; */
+    top: 110px;
+    left: 796px;
+    border-radius: 25px;
     background-color: #fff;
     width: 542px;
     height: 804px;
 }
 .choose-your-role {
     position: absolute;
-    top: 294px;
-    left: 143px;
+    top: 316px;
+    left: 839px;
     line-height: 24px;
     color: #636060;
     display: inline-block;
     width: 309px;
     height: 24px;
 }
-.sign-up1 {
+.sign-in {
     position: absolute;
-    top: 162px;
-    left: 169px;
+    top: 184px;
+    left: 865px;
     font-size: 48px;
     line-height: 56px;
     font-family: Adamina;
     color: #000;
 }
-.sign-up-item {
+.log-in-item {
     position: absolute;
-    top: 281px;
-    left: 141.96px;
+    top: 303px;
+    left: 837.96px;
     border-top: 2px dashed #b5b5b5;
     box-sizing: border-box;
     width: 241.1px;
@@ -38,49 +38,28 @@
 .span {
     color: #000;
 }
-.log-in-here {
+.sign-up-here {
     color: #10104f;
 }
-.already-have-an-container {
+.dont-have-an-container {
     position: absolute;
-    top: 769px;
-    left: 192px;
+    top: 791px;
+    left: 888px;
     line-height: 24px;
     color: #d6bad1;
 }
-.download-2-icon {
-    position: absolute;
-    height: 100%;
-    width: 44.65%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    left: 55.35%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-    object-fit: cover;
-}
 .pizarra-blanca-vaca-en-transp {
     position: absolute;
-    top: 429px;
-    left: 82px;
+    top: 451px;
+    left: 778px;
     width: 553px;
     height: 311px;
     object-fit: cover;
 }
-.designer-1-2 {
+.log-in-inner {
     position: absolute;
-    top: 272px;
-    left: 352px;
-    width: 243px;
-    height: 226px;
-    object-fit: cover;
-}
-.sign-up-inner {
-    position: absolute;
-    top: 547px;
-    left: 205px;
+    top: 569px;
+    left: 901px;
     box-shadow: 0px 2px 1px rgba(76, 139, 214, 0.25);
     border-radius: 100px;
     background-color: #10104f;
@@ -89,8 +68,8 @@
 }
 .rectangle-div {
     position: absolute;
-    top: 547px;
-    left: 388px;
+    top: 569px;
+    left: 1084px;
     box-shadow: 0px 2px 1px rgba(76, 139, 214, 0.25);
     border-radius: 100px;
     background-color: #10104f;
@@ -99,8 +78,8 @@
 }
 .traveler {
     position: absolute;
-    top: 555px;
-    left: 227px;
+    top: 577px;
+    left: 923px;
     font-size: 24px;
     line-height: 32px;
     display: inline-block;
@@ -109,15 +88,31 @@
 }
 .planner {
     position: absolute;
-    top: 555px;
-    left: 410px;
+    top: 577px;
+    left: 1106px;
     font-size: 24px;
     line-height: 32px;
     display: inline-block;
     width: 92px;
     height: 32px;
 }
-.sign-up {
+.fall-self-care-bucket-list-ide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 643px;
+    height: 1024px;
+    object-fit: cover;
+}
+.designer-1-icon {
+    position: absolute;
+    top: 246px;
+    left: 993px;
+    width: 243px;
+    height: 226px;
+    object-fit: cover;
+}
+.log-in {
     width: 100%;
     position: relative;
     border-radius: 25px;
@@ -135,4 +130,3 @@ body {
     margin: 0;
     line-height: normal;
 }
-

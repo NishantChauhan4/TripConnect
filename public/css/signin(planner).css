@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.log-intraveler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(130, 30, 126, 0.83) 19.06%, #10104f 89.9%);
+    height: 100vh;
+    color: #bcb5b5;
+}
+
+.log-intraveler-child {
+    width: 400px;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: #fff;
+    height: 400px;
+}
+
+.sign-in {
+    font-family: 'Adamina', serif;
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.email-username, .password {
+    font-weight: bold;
+    color: #10104f;
+}
+
+.line-div {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.submit-button {
+    background-color: #10104f;
+    color: #fbeeee;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #13135f;
+}
+
+.dont-have-an-container {
+    margin-top: 1rem;
+    text-align: center;
+    color: #d6bad1;
+}
+
+.sign-up-here {
+    color: #10104f;
+    text-decoration: none;
+}
+
+.sign-up-here:hover {
+    text-decoration: underline;
+}

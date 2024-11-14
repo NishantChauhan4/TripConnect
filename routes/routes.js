@@ -2,6 +2,8 @@ const express = require("express");
 const isAuthenticated = require("../middleware/middleware");
 const {
   renderLogin,
+  renderLoginTraveler,
+  renderLoginPlanner,
   renderSignup,
   renderSignupTraveler,
   renderSignupPlanner,
@@ -26,6 +28,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/login", renderLogin);
+
+router.get("/login/traveler", renderLoginTraveler);
+
+router.get("/login/planner", renderLoginPlanner);
 
 router.get("/signup", renderSignup);
 

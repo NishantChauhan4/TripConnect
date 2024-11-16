@@ -10,6 +10,7 @@ const {
   travelerSignup,
   plannerSignup,
   travelerLogin,
+  plannerLogin,
   logout,
   search,
   addTrip,
@@ -43,7 +44,9 @@ router.post("/signup/traveler", travelerSignup);
 
 router.post("/signup/planner", plannerSignup);
 
-router.post("/login", travelerLogin);
+router.post("/login/traveler", travelerLogin);
+
+router.post("/login/planner", plannerLogin);
 
 router.get("logout", logout);
 

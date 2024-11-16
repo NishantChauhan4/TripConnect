@@ -142,6 +142,44 @@ const travelerLogin = async (req, res) => {
   }
 };
 
+const plannerLogin = async (req, res) => {
+  try {
+    const reqUsername = req.body.username;
+    const reqPassword = req.body.password;
+
+    const userFound = await planner.findOne({
+      username: reqUsername,
+    });
+
+    if (
+      userFound != null &&
+      (await bcrypt.compare(reqPassword, userFound.password))
+    ) {
+      const token = jwt.sign(
+        {
+          username: reqUsername,
+          previousLogin: true,
+        },
+        "key",
+        {
+          expiresIn: "3d",
+        }
+      );
+
+      res.cookie("token", token, {
+        maxAge: 3 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
+      });
+
+      res.redirect("/");
+    } else {
+      res.send("Invalid login credentials");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const logout = (req, res) => {
   res.clearCookie("token");
   res.redirect("/");
@@ -203,6 +241,7 @@ module.exports = {
   travelerSignup,
   plannerSignup,
   travelerLogin,
+  plannerLogin,
   logout,
   search,
   addTrip,
